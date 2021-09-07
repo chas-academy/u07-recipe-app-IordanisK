@@ -1,0 +1,17 @@
+<h1>Favorite Recipes</h1>
+<div class="card-holder">
+  <mat-card *ngFor="let userRecipe of userRecipes$ | async">
+    <mat-card-header>
+      <mat-card-title>
+        <a routerLink="../recipes/{{ userRecipe.id }}">{{
+          userRecipe.title
+          }}</a>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ userRecipe.image }}" alt="" />
+    <mat-card-content> </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="deleteRecipe(userRecipe.id)">DELETE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

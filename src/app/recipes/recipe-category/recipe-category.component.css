@@ -1,0 +1,30 @@
+a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-self: flex-start;
+  padding: 5px 0px;
+  font-size: 12pt;
+}
+
+a:hover {
+  background-color: rgba(216, 212, 212, 0.2);
+  height: 30px;
+  width: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  background-color: rgba(216, 212, 212, 0.5);
+  width: 100px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.category-card {
+  width: 100%;
+  min-width: 75%;
+}

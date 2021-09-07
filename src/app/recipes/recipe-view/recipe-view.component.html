@@ -1,0 +1,31 @@
+<mat-card *ngIf="recipe">
+  <mat-card-content>
+    <div class="recipe-image">
+      <mat-card-header>
+        <mat-card-title>{{ recipe.strMeal }}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{ recipe.strMealThumb }}" alt="" />
+      <!-- ta properties från objekt och posta till addRecipe funktionen -->
+      <button mat-button (click)="addRecipe(recipe.idMeal, recipe.strMeal, recipe.strMealThumb)">
+        ADD
+      </button>
+    </div>
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <table>
+        <tr *ngFor="let ingredientMeasure of recipe.ingredientsMeasures">
+          <td>
+            {{ ingredientMeasure.measurement }}
+          </td>
+          <td>
+            {{ ingredientMeasure.ingredient }}
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="instructions">
+      <h2>How to:</h2>
+      <p>{{ recipe.strInstructions }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>

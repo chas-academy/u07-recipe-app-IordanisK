@@ -1,0 +1,48 @@
+mat-card-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.recipe-image {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  max-height: 85%;
+  max-width: 85%;
+}
+
+.ingredients {
+  align-self: flex-start;
+  max-width: 30%;
+  margin-top: 16px;
+}
+
+.instructions {
+  max-width: 80%;
+}
+
+.instructions > p {
+  line-height: 25px;
+}
+
+@media (max-width: 600px) {
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ingredients {
+    max-width: 80%;
+  }
+
+  .recipe-image {
+    max-width: 100%;
+    margin-left: -16px;
+  }
+}

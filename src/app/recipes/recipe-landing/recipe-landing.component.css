@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+:host {
+  margin: 10px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 10% 0px;
+  grid-template-areas:
+    "sidebar main";
+}
+
+app-recipe-category {
+  grid-area: sidebar;
+}
+
+app-recipe-list {
+  grid-area: main;
+}
+
+@media (max-width: 600px) {
+  :host {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+    "main";
+  }
+
+  app-recipe-category {
+    position: absolute;
+    top: 57px;
+    left: -300px;
+    z-index: 1;
+  }
+
+
+
+}

@@ -1,0 +1,28 @@
+<mat-card class="category-card">
+  <mat-card-header>
+    <mat-card-title>Categories</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (change)="onChange(selectedPreference, selectedMealType)" class="grid grid-cols-1">
+      <div>
+        <label class="text-lg text-gray-50 mr-4" for="selectedPreference">Choose a preference</label>
+        <select name="selectedPreference" [(ngModel)]="selectedPreference"
+          class="bg-gray-600 text-gray-50 rounded border border-gray-500 font-medium placeholder-gray-700 focus:outline-none">
+          <option [ngValue]="p.id" *ngFor="let p of preferenceList">
+            {{ p.name }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <label class="text-lg text-gray-50 mr-10" for="selectedMealType">Choose Mealtype</label>
+        <select
+          class="bg-gray-600 text-gray-50 rounded border border-gray-500 font-medium placeholder-gray-700 focus:outline-none"
+          name="selectedMealType" [(ngModel)]="selectedMealType">
+          <option [ngValue]="m.id" *ngFor="let m of mealTypeList">
+            {{ m.name }}
+          </option>
+        </select>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

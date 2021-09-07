@@ -1,0 +1,23 @@
+a {
+  color: white;
+  text-decoration: none;
+  margin: 30px;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 600px) {
+/*   mat-toolbar {
+    display: flex;
+  } */
+
+  .menu-button {
+    display: block;
+  }
+
+  a {
+    margin: 1em;
+  }
+}

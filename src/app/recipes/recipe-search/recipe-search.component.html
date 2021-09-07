@@ -1,0 +1,11 @@
+<mat-form-field>
+  <input
+    [formControl]="inputValue"
+    (keydown.enter)="onClick($event)"
+    matInput
+    placeholder="Search meal"
+  />
+  <mat-icon matSuffix color="primary" (click)="onClick($event)"
+    >search
+  </mat-icon>
+</mat-form-field>
